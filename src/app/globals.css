@@ -1,0 +1,17 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  --radius: 0.625rem;
+  --primary-color: oklch(25.723% 0.00149 16.173);
+  --secondary-color: oklch(94.156% 0.00218 199.828);
+  
+}
+
+/* Hide Next.js development indicator */
+#__next-build-watcher,
+.__next-dev-overlay-triangle {
+  display: none !important;
+}
