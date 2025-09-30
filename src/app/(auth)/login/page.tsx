@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import { useRouter } from 'next/navigation'
+import Link from 'next/link'
 import CenterHubAnimation from '@/components/common/centerhubanimaton'
 import LoginForm from '@/components/common/loginform'
 
@@ -22,7 +23,23 @@ export default function LoginPage() {
             height={60}
             className="h-auto w-[160px] md:w-[200px]"
           />
-          {/* <p>list of icons</p> */}
+          <ul className="flex space-x-6">
+            <li>
+              <Link href="/tutorial" className="text-sm hover:text-neutral-900 transition-colors">
+                Tutorials
+              </Link>
+            </li>
+            <li>
+              <Link href="/rest-api" className="text-sm hover:text-neutral-900 transition-colors">
+                Rest API
+              </Link>
+            </li>
+            <li>
+              <Link href="/user-guide" className="text-sm hover:text-neutral-900 transition-colors">
+                User Guide
+              </Link>
+            </li>
+          </ul>
         </div>
       </header>
 

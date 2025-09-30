@@ -1,6 +1,8 @@
 'use client'
 import React from 'react'
 import SocialIcons from './socialicons'
+import { FaGoogle, FaSignInAlt } from "react-icons/fa";
+
 
 const LoginForm = () => {
   return (
@@ -46,9 +48,10 @@ const LoginForm = () => {
 
                   <button
                     type="button"
-                    className="mt-2 w-full rounded-xl bg-neutral-900 text-white py-3 font-medium tracking-wide hover:bg-black transition"
+                    className="mt-2 w-full cursor-pointer rounded-xl bg-neutral-900 text-white py-3 font-medium tracking-wide hover:bg-black hover:scale-[1.02] hover:shadow-xl hover:shadow-neutral-900/25 active:scale-[0.98] transition-all duration-300 ease-out flex items-center justify-center gap-2 group"
                   >
-                    Sign in
+                    <FaSignInAlt className="transition-transform duration-300 group-hover:rotate-12 group-hover:scale-110" />
+                    <span className="transition-all duration-300 group-hover:tracking-wider">Sign in</span>
                   </button>
 
                   <div className="relative py-3 text-center">
@@ -58,10 +61,10 @@ const LoginForm = () => {
 
                   <button
                     type="button"
-                    className="w-full rounded-xl bg-white ring-1 ring-black/10 py-3 font-medium tracking-wide hover:bg-neutral-50 transition flex items-center justify-center gap-2"
+                    className="w-full cursor-pointer rounded-xl bg-white ring-1 ring-black/10 py-3 font-medium tracking-wide hover:bg-gradient-to-r hover:from-blue-50 hover:to-red-50 hover:ring-2 hover:ring-blue-200/50 hover:scale-[1.02] hover:shadow-lg hover:shadow-blue-100/50 active:scale-[0.98] transition-all duration-300 ease-out flex items-center justify-center gap-2 group"
                   >
-                    <span className="inline-block size-4 rounded-full bg-neutral-900" />
-                    Continue with Google
+                    <FaGoogle className="transition-all duration-300 group-hover:scale-110 group-hover:rotate-[360deg] text-red-500" />
+                    <span className="transition-all duration-300 group-hover:tracking-wider">Continue with Google</span>
                   </button>
 
                   <div className="flex items-center justify-between pt-4 text-sm text-neutral-700">

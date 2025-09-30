@@ -126,4 +126,14 @@
   body {
     @apply bg-background text-foreground;
   }
+  
+  /* Default Font Assignments */
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-satoshi), system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    font-weight: 700;
+  }
+  
+  p, span, div, a, li, td, th, label, input, textarea, button {
+    font-family: var(--font-inter), system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  }
 }
