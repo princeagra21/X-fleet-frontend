@@ -1,139 +1,148 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
-@custom-variant dark (&:is(.dark *));
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --color-primary-color: var(--primary-color);
-  --color-secondary-color: var(--secondary-color);
-  --font-sans: var(--font-inter);
-  --font-secondary: var(--font-satoshi-bold);
-  --font-mono: var(--font-ibm-plex-mono);
-  --color-sidebar-ring: var(--sidebar-ring);
-  --color-sidebar-border: var(--sidebar-border);
-  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
-  --color-sidebar-accent: var(--sidebar-accent);
-  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
-  --color-sidebar-primary: var(--sidebar-primary);
-  --color-sidebar-foreground: var(--sidebar-foreground);
-  --color-sidebar: var(--sidebar);
-  --color-chart-5: var(--chart-5);
-  --color-chart-4: var(--chart-4);
-  --color-chart-3: var(--chart-3);
-  --color-chart-2: var(--chart-2);
-  --color-chart-1: var(--chart-1);
-  --color-ring: var(--ring);
-  --color-input: var(--input);
-  --color-border: var(--border);
-  --color-destructive: var(--destructive);
-  --color-accent-foreground: var(--accent-foreground);
-  --color-accent: var(--accent);
-  --color-muted-foreground: var(--muted-foreground);
-  --color-muted: var(--muted);
-  --color-secondary-foreground: var(--secondary-foreground);
-  --color-secondary: var(--secondary);
-  --color-primary-foreground: var(--primary-foreground);
-  --color-primary: var(--primary);
-  --color-popover-foreground: var(--popover-foreground);
-  --color-popover: var(--popover);
-  --color-card-foreground: var(--card-foreground);
-  --color-card: var(--card);
-  --radius-sm: calc(var(--radius) - 4px);
-  --radius-md: calc(var(--radius) - 2px);
-  --radius-lg: var(--radius);
-  --radius-xl: calc(var(--radius) + 4px);
+@font-face {
+  font-family: "Inter";
+  src: url("/fonts/inter/Inter-Regular.woff2") format("woff2");
+  font-weight: 400; /* Regular */
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Inter";
+  src: url("/fonts/inter/Inter-Medium.woff2") format("woff2");
+  font-weight: 500; /* Medium */
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Inter";
+  src: url("/fonts/inter/Inter-Bold.woff2") format("woff2");
+  font-weight: 700; /* Bold */
+  font-style: normal;
+  font-display: swap;
 }
 
-:root {
-  --radius: 0.625rem;
-  --primary-color: oklch(0.646 0.222 41.116);
-  --secondary-color: oklch(0.6 0.118 184.704);
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.145 0 0);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.145 0 0);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.145 0 0);
-  --primary: oklch(0.205 0 0);
-  --primary-foreground: oklch(0.985 0 0);
-  --secondary: oklch(0.97 0 0);
-  --secondary-foreground: oklch(0.205 0 0);
-  --muted: oklch(0.97 0 0);
-  --muted-foreground: oklch(0.556 0 0);
-  --accent: oklch(0.97 0 0);
-  --accent-foreground: oklch(0.205 0 0);
-  --destructive: oklch(0.577 0.245 27.325);
-  --border: oklch(0.922 0 0);
-  --input: oklch(0.922 0 0);
-  --ring: oklch(0.708 0 0);
-  --chart-1: oklch(0.646 0.222 41.116);
-  --chart-2: oklch(0.6 0.118 184.704);
-  --chart-3: oklch(0.398 0.07 227.392);
-  --chart-4: oklch(0.828 0.189 84.429);
-  --chart-5: oklch(0.769 0.188 70.08);
-  --sidebar: oklch(0.985 0 0);
-  --sidebar-foreground: oklch(0.145 0 0);
-  --sidebar-primary: oklch(0.205 0 0);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.97 0 0);
-  --sidebar-accent-foreground: oklch(0.205 0 0);
-  --sidebar-border: oklch(0.922 0 0);
-  --sidebar-ring: oklch(0.708 0 0);
+/* Satoshi */
+@font-face {
+  font-family: "Satoshi";
+  src: url("/fonts/satoshi/Satoshi-Regular.woff2") format("woff2");
+  font-weight: 400; /* Regular */
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Satoshi";
+  src: url("/fonts/satoshi/Satoshi-Bold.woff2") format("woff2");
+  font-weight: 700; /* Bold */
+  font-style: normal;
+  font-display: swap;
 }
 
-.dark {
-  --primary-color: oklch(0.488 0.243 264.376);
-  --secondary-color: oklch(0.696 0.17 162.48);
-  --background: oklch(0.145 0 0);
-  --foreground: oklch(0.985 0 0);
-  --card: oklch(0.205 0 0);
-  --card-foreground: oklch(0.985 0 0);
-  --popover: oklch(0.205 0 0);
-  --popover-foreground: oklch(0.985 0 0);
-  --primary: oklch(0.922 0 0);
-  --primary-foreground: oklch(0.205 0 0);
-  --secondary: oklch(0.269 0 0);
-  --secondary-foreground: oklch(0.985 0 0);
-  --muted: oklch(0.269 0 0);
-  --muted-foreground: oklch(0.708 0 0);
-  --accent: oklch(0.269 0 0);
-  --accent-foreground: oklch(0.985 0 0);
-  --destructive: oklch(0.704 0.191 22.216);
-  --border: oklch(1 0 0 / 10%);
-  --input: oklch(1 0 0 / 15%);
-  --ring: oklch(0.556 0 0);
-  --chart-1: oklch(0.488 0.243 264.376);
-  --chart-2: oklch(0.696 0.17 162.48);
-  --chart-3: oklch(0.769 0.188 70.08);
-  --chart-4: oklch(0.627 0.265 303.9);
-  --chart-5: oklch(0.645 0.246 16.439);
-  --sidebar: oklch(0.205 0 0);
-  --sidebar-foreground: oklch(0.985 0 0);
-  --sidebar-primary: oklch(0.488 0.243 264.376);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.269 0 0);
-  --sidebar-accent-foreground: oklch(0.985 0 0);
-  --sidebar-border: oklch(1 0 0 / 10%);
-  --sidebar-ring: oklch(0.556 0 0);
+/* IBM Plex Mono */
+@font-face {
+  font-family: "IBM Plex Mono";
+  src: url("/fonts/ibm-plex-mono/IBMPlexMono-Regular.woff2") format("woff2");
+  font-weight: 400; /* Regular */
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ===== Tokens ===== */
+@theme {
+  --color-primary: 15 15 15;        /* #0F0F0F */
+  --color-secondary: 245 245 247;   /* #F5F5F7 */
+  --color-accent: 42 132 255;       /* #2A84FF */
+
+  /* map Tailwind font tokens if you ever use font-sans / font-mono utilities */
+  --font-satoshi: var(--font-satoshi);
+  --font-inter: var(--font-inter);
+  --font-mono: var(--font-mono);
 }
 
 @layer base {
-  * {
-    @apply border-border outline-ring/50;
+  /* Font stacks (declare early) */
+  :root {
+    --font-inter: "Inter";
+    --font-satoshi: "Satoshi";
+    --font-mono: "IBM Plex Mono";
+
+    /* optional: prevent fake bold/italic so you notice missing weights */
+    font-synthesis-weight: none;
+    font-synthesis-style: none;
   }
-  body {
-    @apply bg-background text-foreground;
+
+  /* Dark token flip */
+  .dark {
+    --color-primary: 245 245 247;   /* #F5F5F7 */
+    --color-secondary: 15 15 15;    /* #0F0F0F */
+    --color-accent: 255 92 92;      /* #FF5C5C */
   }
-  
-  /* Default Font Assignments */
-  h1, h2, h3, h4, h5, h6 {
-    font-family: var(--font-satoshi), system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-    font-weight: 700;
+
+  html { color-scheme: light; }
+  .dark { color-scheme: dark; }
+
+  /* Apply Inter globally (stronger specificity) */
+  html, body { font-family: var(--font-inter); }
+
+  /* Code stack */
+  code, pre, kbd, samp {
+    font-family: var(--font-mono);
+    font-feature-settings: "tnum";
+    font-variant-numeric: tabular-nums;
   }
-  
-  p, span, div, a, li, td, th, label, input, textarea, button {
-    font-family: var(--font-inter), system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+
+  /* Paint page */
+  body { @apply bg-secondary text-primary; }
+}
+
+/* Color utility fallbacks (optional but handy) */
+@layer utilities {
+  .text-primary   { color: rgb(var(--color-primary)); }
+  .bg-primary     { background-color: rgb(var(--color-primary)); }
+  .border-primary { border-color: rgb(var(--color-primary)); }
+  .text-secondary   { color: rgb(var(--color-secondary)); }
+  .bg-secondary     { background-color: rgb(var(--color-secondary)); }
+  .border-secondary { border-color: rgb(var(--color-secondary)); }
+  .text-accent    { color: rgb(var(--color-accent)); }
+  .bg-accent      { background-color: rgb(var(--color-accent)); }
+  .border-accent  { border-color: rgb(var(--color-accent)); }
+
+  .font-inter   { font-family: var(--font-inter) !important; }
+  .font-satoshi { font-family: var(--font-satoshi) !important; }
+  .font-plex    { font-family: var(--font-mono) !important; }
+}
+
+/* Components from your previous message kept as-is (heading/text classes)... */
+@layer components {
+  .heading-primary {
+    font-family: var(--font-satoshi);
+    @apply font-bold text-primary text-balance m-0;
+    font-size: clamp(1.30rem, 0.5rem + 3.5vw, 2.8rem);
+    line-height: 1.12;
+    letter-spacing: -0.02em;
   }
+  .heading-secondary {
+    font-family: var(--font-satoshi);
+    @apply font-semibold text-primary text-balance m-0;
+    font-size: clamp(1.375rem, 0.9rem + 2.4vw, 2.5rem);
+    line-height: 1.16;
+    letter-spacing: -0.015em;
+  }
+  .custom-text-primary {
+    font-family: var(--font-inter);
+    @apply text-primary m-0;
+    font-size: clamp(1rem, 0.95rem + 0.4vw, 1.125rem);
+    line-height: 1.5;
+    letter-spacing: 0em;
+  }
+  .custom-text-secondary {
+    font-family: var(--font-inter);
+    @apply text-primary/70 m-0;
+    font-size: clamp(0.9375rem, 0.9rem + 0.3vw, 1.0625rem);
+    line-height: 1.5;
+    letter-spacing: 0.005em;
+  }
+  .heading-primary.tight   { line-height: 1.06; letter-spacing: -0.028em; }
+  .heading-primary.relaxed { line-height: 1.18; letter-spacing: -0.012em; }
 }

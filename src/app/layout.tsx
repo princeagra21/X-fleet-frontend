@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { APP_CONFIG } from "@/constants";
 import "./globals.css";
-import "@/styles/fonts.css";
+
 
 export const metadata: Metadata = {
   title: APP_CONFIG.name,
@@ -17,9 +17,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className="font-sans antialiased"
-      >
+      <body>
         {children}
       </body>
     </html>
