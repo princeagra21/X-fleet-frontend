@@ -1,4 +1,4 @@
-import { FaFacebook, FaTwitter, FaLinkedin, FaInstagram } from "react-icons/fa";
+import { FaFacebook, FaTwitter, FaLinkedin, FaInstagram, FaYoutube } from "react-icons/fa";
 
 export default function SocialIcons() {
   const iconStyle = "w-6 h-6 text-gray-700 hover:text-black transition-colors";
@@ -16,6 +16,9 @@ export default function SocialIcons() {
       </a>
       <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
         <FaInstagram className={iconStyle} />
+      </a>
+      <a href="https://youtube.com" target="_blank" rel="noopener noreferrer">
+        <FaYoutube className={iconStyle} />
       </a>
     </div>
   );

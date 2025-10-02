@@ -27,7 +27,7 @@ const LoginForm = () => {
         {/* Title */}
         <h1
           className={[
-            'mb-5 font-semibold tracking-tight text-2xl leading-tight',
+            'mb-5  tracking-tight text-2xl heading-secondary leading-tight',
             // slightly smaller on shorter heights
             '[@media(max-height:860px)]:text-xl',
             '[@media(max-height:780px)]:text-lg',
@@ -148,7 +148,7 @@ const LoginForm = () => {
             ].join(' ')}
           >
             <FaSignInAlt className="transition-transform duration-300 group-hover:rotate-12 group-hover:scale-110" />
-            <span className="transition-all duration-300 group-hover:tracking-wider">
+            <span className="transition-all  duration-300 group-hover:tracking-wider">
               Sign in
             </span>
           </button>
